@@ -1,15 +1,19 @@
-<h1>Logo goes here!!</h1>
+<h1 style="text-align:center; margin-bottom: 80px;">Logo goes here!!</h1>
 
-<p>Student ID: <%= @students.id %></p>
-<p>First Name: <%= @students.first_name %></p>
-<p>Second Name: <%= @students.second_name %></p>
-<p>House: <%= @house.name %></p>
-<p>Age: <%= @students.age %></p>
+<div class="student-details">
+  <p>Student ID: <%= @students.id %></p>
+  <p>First Name: <%= @students.first_name %></p>
+  <p>Second Name: <%= @students.second_name %></p>
+  <p>House: <%= @students.find_house.name %></p>
+  <p>Age: <%= @students.age %></p>
+</div>
 
-<form action="/students/<%= @students.id %>/edit" method="get">
-  <input type="Submit" value="Edit Details">
-</form>
 <br>
+
+<form action="/students/<%= @students.id %>/edit" method="GET">
+  <input type="submit" value="Edit Details">
+</form>
+
 <form action="/students/<%= @students.id %>/delete" method="post">
   <input type="Submit" value="Remove Student">
 </form>

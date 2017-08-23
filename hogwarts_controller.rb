@@ -4,6 +4,9 @@ require( 'pry-byebug' )
 require_relative( './models/student.rb')
 require_relative( './models/house.rb')
 
+get '/home' do
+  erb(:home)
+end
 
 # INDEX route
 get '/students' do
@@ -13,6 +16,7 @@ end
 
 # NEW route
 get '/students/new' do
+  @houses = House.all
   erb(:new)
 end
 
@@ -25,27 +29,28 @@ end
 
 # SHOW route
 get '/students/:id' do
-  @students = Student.find(params[:id])
-  @house = House.find(@students.house_id)
+  @students = Student.find(params["id"])
+  @house = House.find(@students.house_id).name
   erb(:show)
 end
 
 # DELETE route
 post '/students/:id/delete' do
-  @students = Student.find(params[:id])
+  @students = Student.find(params["id"])
   @students.delete()
   redirect to'/students'
 end
 
 # EDIT route
 get '/students/:id/edit' do
-  @students = Student.find(params[:id])
+  @houses = House.all
+  @students = Student.find(params["id"])
   erb(:edit)
 end
 
 # UPDATE route
-post '/students/:id' do
+post "/students/:id" do
   @students = Student.new(params)
   @students.update()
-  redirect to "students/#{@students.id}"
+  redirect to "/students/#{@students.id}"
 end

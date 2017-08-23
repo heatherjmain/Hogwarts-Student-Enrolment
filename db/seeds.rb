@@ -14,21 +14,21 @@ house3.save()
 student1 = Student.new({
   "first_name"=> "Harry",
   "second_name"=> "Potter",
-  "house_id"=> 1,
+  "house_id"=> house1.id,
   "age"=> 13
   })
 
 student2 = Student.new({
   "first_name"=> "Ron",
   "second_name"=> "Weasley",
-  "house_id"=> 1,
+  "house_id"=> house1.id,
   "age"=> 14
   })
 
 student3 = Student.new({
   "first_name"=> "Hermione",
   "second_name"=> "Granger",
-  "house_id"=> 1,
+  "house_id"=> house1.id,
   "age"=> 13
   })
 

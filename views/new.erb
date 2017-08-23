@@ -1,23 +1,31 @@
-<form action="/students" method="post">
+<form action="/students" method="POST">
 
-  <label for="first-name-field">First Name:</label>
-  <input id="first-name-field" type="text" name="first_name"/>
+  <div style="display: block;">
+    <label for="first-name-field">First Name:</label>
+    <input id="first-name-field" type="text" name="first_name" style="height: 30px; width: 300px;"/>
+  </div>
 
-  <label for="second-name-field">Second Name:</label>
-  <input id="second-name-field" type="text" name="second_name">
+  <div style="display: block;">
+    <label for="second-name-field">Second Name:</label>
+    <input id="second-name-field" type="text" name="second_name"style="height: 30px; width: 300px;">
+  </div>
 
-  <label for="house-select">Select House:</label>
+  <div style="display: block;">
+    <label for="house_select">Select House:</label>
 
-  <select id="house-select" name="house_id">
-    <option value=1>Gryffindor</option>
-    <option value=2>Ravenclaw</option>
-    <option value=3>Hufflepuff</option>
-    <option value=4>Slytherin</option>
-  </select>
+    <select id="house_select" name="house_id" style="font-size: 20px; font-family: cursive;">
+      <option value=1>Gryffindor</option>
+      <option value=2>Ravenclaw</option>
+      <option value=3>Hufflepuff</option>
+      <option value=4>Slytherin</option>
+    </select>
+  </div>
 
-  <label for="age">Age:</label>
-  <input id="age" type="number" name="age"/>
+  <div style="display: block;">
+    <label for="age">Age:</label>
+    <input id="age" type="number" name="age" style="height: 30px; width: 300px;"/>
+  </div>
 
-  <input type="submit" value="Enrol Student"/>
+  <input type="submit" value="Enrol Student" style="font-size: 20px;"/>
 
 </form>

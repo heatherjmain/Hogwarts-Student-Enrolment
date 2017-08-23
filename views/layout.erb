@@ -1,16 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang-"en-GB">
 <head>
-  <title>Hogwarts</title>
-  <link rel="stylesheet" href="/styles.css">
+  <meta charset-"utf-8">
+  <title>Student Enrolment System</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+
+<div class="school-logo">
+  <a href="/home"><img src="/hogwarts_logo.png" alt="hogwarts logo" style="width: 200px" /></a>
+</div>
+
+<div class="nav-links">
   <nav>
-    <ul>
-      <li><a href="/students">All Students</a></li>
-      <li><a href="/students/new">Enrol Student</a></li>
-    </ul>
+      <a href="/students" style="margin-right: 50px;"><img src="/all_students_logo.png" alt="All Students" style="width: 100px; margin-bottom: 50px;"></a>
+      <a href="/students/new" style="margin-left: 50px;"><img src="/enrol_student_button.png" alt="Enrol Student" style="width: 100px; margin-bottom: 50px;" /></a>
+
   </nav>
+</div>
+
   <%= yield %>
 </body>
+
 </html>

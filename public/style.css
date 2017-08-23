@@ -1,0 +1,67 @@
+body {
+  background-color: antiquewhite;
+  font-family: cursive;
+  color: #3f250b;
+  font-weight: bolder;
+}
+
+.nav-links {
+  display: inline;
+  text-align: center;
+}
+
+.school-logo {
+  text-align: center;
+}
+
+.home {
+  text-align: center;
+}
+
+.welcome {
+  font-size: 30px;
+
+}
+
+.student-details {
+  line-height: 5px;
+  text-align: center;
+}
+
+.index {
+  line-height: 0px;
+}
+
+p {
+  font-size: 30px;
+}
+
+form {
+  text-align: center;
+  font-size: 30px;
+}
+
+
+
+
+
+
+
+
+/*@media (min-width: 480px) {
+  .grid-row-sm {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 720px) {
+  .grid-row-md {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 960px) {
+  .grid-row-lg {
+    flex-direction: row;
+  }
+}*/

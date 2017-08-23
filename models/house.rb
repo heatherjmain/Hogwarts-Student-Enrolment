@@ -6,7 +6,7 @@ class House
   attr_reader :id
 
   def initialize(params)
-    @id = params["id"].to_i()
+    @id = params["id"].to_i() if params["id"]
     @name = params["name"]
     @logo = params["logo"]
   end
@@ -16,7 +16,7 @@ class House
     ( name, logo)
     VALUES
     ( $1, $2 )
-    RETURNING *
+    RETURNING id
     "
     values = [@name, @logo]
     house_data = SqlRunner.run(sql, values)
@@ -36,8 +36,8 @@ class House
     WHERE id = $1
     "
     values = [id]
-    houses = SqlRunner.run( sql, values )
-    result = House.new( houses.first )
+    houses = SqlRunner.run( sql, values ).first
+    result = House.new( houses )
     return result
   end
 
