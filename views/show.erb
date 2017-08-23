@@ -1,0 +1,15 @@
+<h1>Logo goes here!!</h1>
+
+<p>Student ID: <%= @students.id %></p>
+<p>First Name: <%= @students.first_name %></p>
+<p>Second Name: <%= @students.second_name %></p>
+<p>House: <%= @house.name %></p>
+<p>Age: <%= @students.age %></p>
+
+<form action="/students/<%= @students.id %>/edit" method="get">
+  <input type="Submit" value="Edit Details">
+</form>
+<br>
+<form action="/students/<%= @students.id %>/delete" method="post">
+  <input type="Submit" value="Remove Student">
+</form>
