@@ -24,11 +24,11 @@ class Student
     student_data = SqlRunner.run(sql, values)
     @id = student_data.first()['id']
   end
-  
-  def find_house()
-    house = House.find(@house_id)
-    return house
-  end
+
+  # def find_house()
+  #   house = House.find(@house_id)
+  #   return house
+  # end
 
   def update()
     sql = "UPDATE students
@@ -66,13 +66,13 @@ class Student
   end
 
 
-  # def find_house()
-  #   sql = "SELECT * FROM houses
-  #   WHERE id = $1
-  #   "
-  #   values = [@house_id]
-  #   house_object = SqlRunner.run(sql, values)
-  #   house = House.new( house_object.first )
-  #   return house
-  # end
+  def find_house()
+    sql = "SELECT * FROM houses
+    WHERE id = $1
+    "
+    values = [@house_id]
+    house_object = SqlRunner.run(sql, values)
+    house = House.new( house_object.first )
+    return house
+  end
 end

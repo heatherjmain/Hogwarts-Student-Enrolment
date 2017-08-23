@@ -30,7 +30,7 @@ end
 # SHOW route
 get '/students/:id' do
   @students = Student.find(params["id"])
-  @house = House.find(@students.house_id).name
+  @house = House.find(@students.house_id)
   erb(:show)
 end
 
